@@ -1,102 +1,76 @@
-/*!
-Theme Name: friendly-guide
-Theme URI: http://underscores.me/
-Author: cutratefuture
-Author URI: https://github.com/cutratefuture/friendly-guide
-Description: theme for hackin\'
-Version: 1.0.0
-Tested up to: 5.4
-Requires PHP: 5.6
-License: GNU General Public License v2 or later
-License URI: LICENSE
-Text Domain: friendly-guide
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+@import "libs/vars";
+@import "libs/functions";
+@import "libs/mixins";
+@import "libs/vendor";
+@import "libs/breakpoints";
+@import "libs/html-grid";
+@import "fontawesome-all.min.css";
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Raleway:400,800,900");
 
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned.
-
-friendly-guide is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
-
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+/*
+	Future Imperfect by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
 */
 
-/*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-# Generic
-	- Normalize
-	- Box sizing
-# Base
-	- Typography
-	- Elements
-	- Links
-	- Forms
-## Layouts
-# Components
-	- Navigation
-	- Posts and pages
-	- Comments
-	- Widgets
-	- Media
-	- Captions
-	- Galleries
-# plugins
-	- Jetpack infinite scroll
-# Utilities
-	- Accessibility
-	- Alignments
+// Breakpoints.
 
---------------------------------------------------------------*/
+@include breakpoints(
+  (
+    xlarge: (
+      1281px,
+      1680px,
+    ),
+    large: (
+      981px,
+      1280px,
+    ),
+    medium: (
+      737px,
+      980px,
+    ),
+    small: (
+      481px,
+      736px,
+    ),
+    xsmall: (
+      null,
+      480px,
+    ),
+  )
+);
 
-// Import variables and mixins.
-@import "abstracts/abstracts";
-
-/*--------------------------------------------------------------
-# Generic
---------------------------------------------------------------*/
-
-/* Normalize
---------------------------------------------- */
-@import "generic/normalize";
-
-/* Box sizing
---------------------------------------------- */
-@import "generic/box-sizing";
-
-/*--------------------------------------------------------------
-# Base
---------------------------------------------------------------*/
+// Base.
 @import "base/base";
+@import "base/reset";
+@import "base/page";
+@import "base/typography";
 
-/*--------------------------------------------------------------
-# Layouts
---------------------------------------------------------------*/
-// @import "layouts/content-sidebar"; // Uncomment this line for a sidebar on right side of your content.
-// @import "layouts/sidebar-content"; // Uncomment this line for a sidebar on left side of your content.
+// Component.
 
-/*--------------------------------------------------------------
-# Components
---------------------------------------------------------------*/
-@import "components/components";
+@import "components/row";
+@import "components/author";
+@import "components/blurb";
+@import "components/box";
+@import "components/button";
+@import "components/form";
+@import "components/icon";
+@import "components/image";
+@import "components/list";
+@import "components/actions";
+@import "components/icons";
+@import "components/posts";
+@import "components/mini-post";
+@import "components/post";
+@import "components/section";
+@import "components/table";
 
-/*--------------------------------------------------------------
-# Plugins
---------------------------------------------------------------*/
+// Layout.
 
-/* Jetpack infinite scroll
---------------------------------------------- */
-@import "plugins/jetpack/infinite-scroll";
-
-/*--------------------------------------------------------------
-# Utilities
---------------------------------------------------------------*/
-
-/* Accessibility
---------------------------------------------- */
-@import "utilities/accessibility";
-
-/* Alignments
---------------------------------------------- */
-@import "utilities/alignments";
+@import "layout/header";
+@import "layout/wrapper";
+@import "layout/main";
+@import "layout/sidebar";
+@import "layout/intro";
+@import "layout/footer";
+@import "layout/menu";
