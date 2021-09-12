@@ -10,6 +10,7 @@
 ?>
 
 <section class="no-results not-found">
+	hi from content-none.php
 	<header class="page-header">
 		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'friendly-guide' ); ?></h1>
 	</header><!-- .page-header -->

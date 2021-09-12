@@ -173,10 +173,18 @@ function friendly_guide_scripts()
 	wp_enqueue_script('breakpoints-min-js');
 	wp_enqueue_script('util-js');
 	wp_enqueue_script('main-js');
-
-
 }
 add_action('wp_enqueue_scripts', 'friendly_guide_scripts');
+
+function wpb_load_fa() {
+	wp_enqueue_style('wpb-fa', get_stylesheet_directory_uri() . '/fonts/css/font-awesome.min.css');
+}
+
+add_action('wp_enqueue_scripts', 'wpb_load_fa');
+
+
+
+
 
 /**
  * Implement the Custom Header feature.
