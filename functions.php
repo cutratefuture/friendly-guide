@@ -176,14 +176,31 @@ function friendly_guide_scripts()
 }
 add_action('wp_enqueue_scripts', 'friendly_guide_scripts');
 
-function wpb_load_fa() {
-	wp_enqueue_style('wpb-fa', get_stylesheet_directory_uri() . '/fonts/css/font-awesome.min.css');
-}
 
+function wpb_load_fa() {
+	wp_enqueue_style('wpb-fa', FRIENDLY_DIR_URI  . '/fontawesome-all.min.css');
+}
 add_action('wp_enqueue_scripts', 'wpb_load_fa');
 
 
+function wpse15850_body_class( $wp_classes, $extra_classes )
+{
+    // List of the only WP generated classes allowed
+    $whitelist = array( 'home', 'blog', 'archive', 'single', 'category', 'tag', 'error404', 'logged-in', 'admin-bar' );
 
+    // List of the only WP generated classes that are not allowed
+    $blacklist = array( 'home', 'blog', 'archive', 'single', 'category', 'tag', 'error404', 'logged-in', 'admin-bar' );
+
+    // Filter the body classes
+    // Whitelist result: (comment if you want to blacklist classes)
+    #$wp_classes = array_intersect( $wp_classes, $whitelist );
+    // Blacklist result: (uncomment if you want to blacklist classes)
+    $wp_classes = array_diff( $wp_classes, $blacklist );
+
+    // Add the extra classes back untouched
+    return array_merge( $wp_classes, (array) $extra_classes );
+}
+add_filter( 'body_class', 'wpse15850_body_class', 10, 2 );
 
 
 /**

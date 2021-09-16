@@ -11,8 +11,8 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('post'); ?>>
-hi from content.php	
-<header class="entry-header">
+	hi from content.php
+	<header class="entry-header">
 		<?php
 		if (is_singular()) :
 			the_title('<h1 class="title">', '</h1>');
@@ -35,20 +35,7 @@ hi from content.php
 
 	<div class="post">
 		<?php
-		the_content(
-			sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__('Continue reading<span class="screen-reader-text"> "%s"</span>', 'friendly-guide'),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				wp_kses_post(get_the_title())
-			)
-		);
+		the_excerpt();
 
 		wp_link_pages(
 			array(
