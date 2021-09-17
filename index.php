@@ -17,7 +17,6 @@ get_header();
 ?>
 
 <main id="main">
-	hello from index.php
 
 	<?php
 	if (have_posts()) :

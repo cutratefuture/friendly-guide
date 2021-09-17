@@ -25,7 +25,7 @@
 <body <?php body_class('is-preload'); ?>>
 
 	<?php wp_body_open(); ?>
-	hi from header.php
+
 
 	<div id="wrapper">
 		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'friendly-guide'); ?></a>

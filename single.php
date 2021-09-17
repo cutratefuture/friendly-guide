@@ -11,7 +11,7 @@
 get_header();
 ?>
 <main id="main" <?php post_class(''); ?>>
-	hi from single.php
+
 	<header class="entry-header">
 		<?php
 		if (is_singular()) :

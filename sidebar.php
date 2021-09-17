@@ -13,7 +13,7 @@ if (!is_active_sidebar('sidebar-1')) {
 }
 ?>
 <section id="sidebar">
-hi from sidebar.php
+
 
 	<?php dynamic_sidebar('sidebar-1'); ?>
 

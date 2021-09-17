@@ -11,7 +11,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('post'); ?>>
-	hi from content.php
+
 	<header class="entry-header">
 		<?php
 		if (is_singular()) :

@@ -14,7 +14,7 @@
 
 get_header();
 ?>
-	hi from page.php
+
 
 	<main id="primary" class="site-main">
 
