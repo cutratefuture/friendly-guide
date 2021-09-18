@@ -32,7 +32,7 @@
 
 		<header id="header">
 			<?php
-			#checks for a set site title, and if so hides it if there is a custom logo
+			# TODO: hide title and desc if logo is present
 			the_custom_logo();
 			if (is_front_page() && is_home()) :
 			?>
