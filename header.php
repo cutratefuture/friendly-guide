@@ -31,26 +31,22 @@
 		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'friendly-guide'); ?></a>
 
 		<header id="header">
-			<div>
-				<?php
-				the_custom_logo();
-				if (is_front_page() && is_home()) :
-				?>
-
-					<h1><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
-				<?php
-				else :
-				?>
-					<h1><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
-				<?php
-				endif;
+			<?php
+			#checks for a set site title, and if so hides it if there is a custom logo
+			the_custom_logo();
+			if (is_front_page() && is_home()) :
+			?>
+				<h1><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
+				<?php endif; ?>
+			<?php
 				$friendly_guide_description = get_bloginfo('description', 'display');
 				if ($friendly_guide_description || is_customize_preview()) :
-				?>
-					<p><?php echo $friendly_guide_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
-						?></p>
-				<?php endif; ?>
-			</div><!-- .site-branding -->
+			?>
+				<div>
+					<?php echo $friendly_guide_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+				</div>
+
+			<?php endif; ?>
 
 			<nav class="links">
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Primary Menu', 'friendly-guide'); ?></button>
@@ -58,7 +54,7 @@
 				wp_nav_menu(
 					array(
 						'theme_location' => 'menu-1',
-					
+
 						'menu_id'        => 'primary-menu',
 					)
 				);
