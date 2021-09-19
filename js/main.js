@@ -5,9 +5,9 @@
 */
 
 // noconflict
-var $j = jQuery.noConflict()
+var $j = jQuery.noConflict();
 
-;(function ($) {
+(function ($) {
   var $window = $j(window),
     $body = $j("body"),
     $menu = $j("#menu"),
