@@ -19,7 +19,7 @@ if (!is_active_sidebar('sidebar-1')) {
 
 	<!-- Footer -->
 	<section id="footer">
-		<ul class="icons">
+		<!-- <ul class="icons">
 			<li>
 				<a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a>
 			</li>
@@ -35,7 +35,7 @@ if (!is_active_sidebar('sidebar-1')) {
 			<li>
 				<a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a>
 			</li>
-		</ul>
+		</ul> -->
 		<p class="copyright">
 			<?php
 			/* translators: 1: Theme name, 2: Theme author. */
