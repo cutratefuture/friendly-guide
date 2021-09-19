@@ -46,7 +46,7 @@
 					),
 					wp_kses_post( get_the_title() )
 				),
-				'<span class="edit-link">',
+				'&nbsp;<span class="edit-link">',
 				'</span>'
 			);
 			?>

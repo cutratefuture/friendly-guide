@@ -59,5 +59,5 @@
 					)
 				);
 				?>
-			</nav><!-- #site-navigation -->
-		</header><!-- #masthead -->
+			</nav><!-- .link -->
+		</header><!-- #header -->
