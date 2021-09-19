@@ -74,7 +74,7 @@ if (!function_exists('friendly_guide_entry_footer')) :
 			$tags_list = get_the_tag_list('', esc_html_x(', ', 'list item separator', 'friendly-guide'));
 			if ($tags_list) {
 				/* translators: 1: list of tags. */
-				printf('<span class="tags-links">' . esc_html__('Tagged %1$s', 'friendly-guide') . '</span>', $tags_list); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				printf('<span class="tags-links">' . esc_html__('Tagged %1$s', 'friendly-guide') . '</span>&nbsp;', $tags_list); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			}
 		}
 
