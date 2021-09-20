@@ -1,8 +1,4 @@
-/*
-	Future Imperfect by Pixelarity
-	pixelarity.com | hello@pixelarity.com
-	License: pixelarity.com/license
-*/
+
 
 // noconflict
 var $j = jQuery.noConflict();

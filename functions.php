@@ -194,6 +194,7 @@ function wpse15850_body_class( $wp_classes, $extra_classes )
     // Filter the body classes
     // Whitelist result: (comment if you want to blacklist classes)
     #$wp_classes = array_intersect( $wp_classes, $whitelist );
+	
     // Blacklist result: (uncomment if you want to blacklist classes)
     $wp_classes = array_diff( $wp_classes, $blacklist );
 
