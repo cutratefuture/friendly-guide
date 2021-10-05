@@ -1,5 +1,5 @@
 @import url(fontawesome-all.min.css);
-@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital@1&family=Rubik:wght@300;600&display=swap");
 /*!
 Theme Name: friendly-guide
 Theme URI: http://underscores.me/
@@ -50,81 +50,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 # Base
 --------------------------------------------------------------*/
-/* Typography
---------------------------------------------- */
-body,
-button,
-input,
-select,
-optgroup,
-textarea {
-	color: #404040;
-	font-family: 'Rubik', sans-serif, monospace;
-	font-size: 1rem;
-	line-height: 1.5;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	clear: both;
-}
-
-p {
-	margin-bottom: 1.5em;
-}
-
-dfn,
-cite,
-em,
-i {
-	font-style: italic;
-}
-
-blockquote {
-	margin: 0 1.5em;
-}
-
-address {
-	margin: 0 0 1.5em;
-}
-
-pre {
-	background: #eee;
-	font-family: 'Rubik', sans-serif, monospace;
-	line-height: 1.6;
-	margin-bottom: 1.6em;
-	max-width: 100%;
-	overflow: auto;
-	padding: 1.6em;
-}
-
-code,
-kbd,
-tt,
-var {
-	font-family: 'Rubik', sans-serif, monospace;
-}
-
-abbr,
-acronym {
-	border-bottom: 1px dotted #666;
-	cursor: help;
-}
-
-mark,
-ins {
-	background: #fff9c0;
-	text-decoration: none;
-}
-
-big {
-	font-size: 125%;
-}
-
 /* Elements
 --------------------------------------------- */
 body {
@@ -209,6 +134,11 @@ a:focus {
 a:hover,
 a:active {
 	outline: 0;
+}
+
+#primary-menu ul {
+	text-align: end;
+	list-style-type: none;
 }
 
 /* Forms
@@ -774,7 +704,7 @@ html {
 }
 
 body {
-	background: #fff;
+	background: #0A0A0A;
 }
 
 body.is-preload *,
@@ -794,8 +724,8 @@ body,
 input,
 select,
 textarea {
-	color: #a2a2a2;
-	font-family: "Rubik", Helvetica, sans-serif;
+	color: #F4F4F9;
+	font-family: "Karla", Helvetica, monospace;
 	font-size: 16pt;
 	font-weight: 400;
 	line-height: 1.75em;
@@ -806,20 +736,19 @@ a {
 	-webkit-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 	-ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 	transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-	border-bottom: dotted 1px;
-	color: #49bf9d;
+	color: #04724D;
 	text-decoration: none;
 }
 
 a:hover {
 	border-bottom-color: transparent;
-	color: #49bf9d !important;
+	color: #04724D !important;
 	text-decoration: none;
 }
 
 strong,
 b {
-	color: #787878;
+	color: #F4F4F9;
 	font-weight: 400;
 }
 
@@ -838,7 +767,7 @@ h3,
 h4,
 h5,
 h6 {
-	color: #787878;
+	color: #F4F4F9;
 	font-weight: 400;
 	line-height: 1em;
 	margin: 0 0 1em 0;
@@ -898,7 +827,7 @@ sup {
 
 hr {
 	border: 0;
-	border-bottom: solid 2px #efefef;
+	border-bottom: solid 2px #CC2936;
 	margin: 2em 0;
 }
 
@@ -907,17 +836,17 @@ hr.major {
 }
 
 blockquote {
-	border-left: solid 6px #efefef;
+	border-left: solid 6px #CC2936;
 	font-style: italic;
 	margin: 0 0 2em 0;
 	padding: 0.5em 0 0.5em 1.5em;
 }
 
 code {
-	background: #f7f7f7;
+	background: cyan;
 	border-radius: 0.35em;
-	border: solid 2px #efefef;
-	font-family: "Courier New", monospace;
+	border: solid 2px #CC2936;
+	font-family: "Rubik", sans-serif;
 	font-size: 0.9em;
 	margin: 0 0.25em;
 	padding: 0.25em 0.65em;
@@ -925,7 +854,7 @@ code {
 
 pre {
 	-webkit-overflow-scrolling: touch;
-	font-family: "Courier New", monospace;
+	font-family: "Rubik", sans-serif;
 	font-size: 0.9em;
 	margin: 0 0 2em 0;
 }
@@ -2188,7 +2117,7 @@ pre code {
 /* Box */
 .box {
 	border-radius: 0.35em;
-	border: solid 2px #efefef;
+	border: solid 2px #CC2936;
 	margin-bottom: 2em;
 	padding: 1.5em;
 }
@@ -2208,7 +2137,7 @@ pre code {
 /* Box */
 .box {
 	border-radius: 0.35em;
-	border: solid 2px #efefef;
+	border: solid 2px #CC2936;
 	margin-bottom: 2em;
 	padding: 1.5em;
 }
@@ -2398,7 +2327,7 @@ ul.alt {
 }
 
 ul.alt li {
-	border-top: solid 2px #efefef;
+	border-top: solid 2px #CC2936;
 	padding: 0.5em 0;
 }
 
@@ -2453,7 +2382,7 @@ ul.labeled-icons li a {
 }
 
 ul.labeled-icons li h3 {
-	color: #b2b2b2;
+	color: #04724D;
 	left: 0;
 	position: absolute;
 	text-align: center;
@@ -2587,13 +2516,13 @@ table {
 }
 
 table tbody tr {
-	border: solid 1px #efefef;
+	border: solid 1px #CC2936;
 	border-left: 0;
 	border-right: 0;
 }
 
 table tbody tr:nth-child(2n + 1) {
-	background-color: #f7f7f7;
+	background-color: cyan;
 }
 
 table td {
@@ -2601,7 +2530,7 @@ table td {
 }
 
 table th {
-	color: #787878;
+	color: #F4F4F9;
 	font-size: 0.9em;
 	font-weight: 400;
 	padding: 0 0.75em 0.75em 0.75em;
@@ -2609,11 +2538,11 @@ table th {
 }
 
 table thead {
-	border-bottom: solid 2px #efefef;
+	border-bottom: solid 2px #CC2936;
 }
 
 table tfoot {
-	border-top: solid 2px #efefef;
+	border-top: solid 2px #CC2936;
 }
 
 table.alt {
@@ -2621,7 +2550,7 @@ table.alt {
 }
 
 table.alt tbody tr td {
-	border: solid 2px #efefef;
+	border: solid 2px #CC2936;
 	border-left-width: 0;
 	border-top-width: 0;
 }
@@ -2657,8 +2586,8 @@ input[type="button"],
 	transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 	background-color: transparent;
 	border-radius: 0.35em;
-	border: solid 3px #efefef;
-	color: #787878 !important;
+	border: solid 3px #CC2936;
+	color: #F4F4F9 !important;
 	cursor: pointer;
 	display: inline-block;
 	font-weight: 400;
@@ -2676,17 +2605,17 @@ input[type="submit"]:hover,
 input[type="reset"]:hover,
 input[type="button"]:hover,
 .button:hover {
-	border-color: #49bf9d;
-	color: #49bf9d !important;
+	border-color: #04724D;
+	color: #04724D !important;
 }
 
 input[type="submit"]:active,
 input[type="reset"]:active,
 input[type="button"]:active,
 .button:active {
-	background-color: rgba(73, 191, 157, 0.1);
-	border-color: #49bf9d;
-	color: #49bf9d !important;
+	background-color: rgba(4, 114, 77, 0.1);
+	border-color: #04724D;
+	color: #04724D !important;
 }
 
 input[type="submit"].icon,
@@ -2729,25 +2658,25 @@ input[type="submit"].primary,
 input[type="reset"].primary,
 input[type="button"].primary,
 .button.primary {
-	background-color: #49bf9d;
-	border-color: #49bf9d;
-	color: #ffffff !important;
+	background-color: #04724D;
+	border-color: #04724D;
+	color: #F4F4F9 !important;
 }
 
 input[type="submit"].primary:hover,
 input[type="reset"].primary:hover,
 input[type="button"].primary:hover,
 .button.primary:hover {
-	background-color: #5cc6a7;
-	border-color: #5cc6a7;
+	background-color: #058b5e;
+	border-color: #058b5e;
 }
 
 input[type="submit"].primary:active,
 input[type="reset"].primary:active,
 input[type="button"].primary:active,
 .button.primary:active {
-	background-color: #3eb08f;
-	border-color: #3eb08f;
+	background-color: #03593c;
+	border-color: #03593c;
 }
 
 input[type="submit"].disabled, input[type="submit"]:disabled,
@@ -2757,9 +2686,9 @@ input[type="button"].disabled,
 input[type="button"]:disabled,
 .button.disabled,
 .button:disabled {
-	background-color: #e7e7e7 !important;
-	border-color: #e7e7e7 !important;
-	color: #b2b2b2 !important;
+	background-color: teal !important;
+	border-color: teal !important;
+	color: #04724D !important;
 	cursor: default;
 }
 
@@ -2781,7 +2710,7 @@ input[type="button"]:disabled,
 	-webkit-justify-content: space-between;
 	-ms-justify-content: space-between;
 	justify-content: space-between;
-	background-color: #1f1815;
+	background-color: #222;
 	background-attachment: scroll, scroll;
 	background-image: url("images/overlay.png"), url("../../images/bg.jpg");
 	background-position: top left, top left;
@@ -2815,7 +2744,7 @@ input[type="button"]:disabled,
 
 #header strong,
 #header b {
-	color: #ffffff;
+	color: #F4F4F9;
 }
 
 #header h2,
@@ -2823,7 +2752,7 @@ input[type="button"]:disabled,
 #header h4,
 #header h5,
 #header h6 {
-	color: #ffffff;
+	color: #F4F4F9;
 }
 
 #header h1 {
@@ -2882,7 +2811,7 @@ input[type="button"]:disabled,
 }
 
 #main > section {
-	border-top: solid 2px #efefef;
+	border-top: solid 2px #CC2936;
 	margin: 4em 0 0 0;
 	padding: 4em 0 0 0;
 }
@@ -2902,7 +2831,7 @@ input[type="button"]:disabled,
 }
 
 #main > section {
-	border-top: solid 2px #efefef;
+	border-top: solid 2px #CC2936;
 	margin: 4em 0 0 0;
 	padding: 4em 0 0 0;
 }
@@ -3266,7 +3195,7 @@ body.is-touch .poptrox-popup .closer {
 	/* Footer */
 	#footer {
 		background-attachment: scroll;
-		background-color: #1f1815;
+		background-color: #222;
 		background-image: url("images/overlay.png"), url("../../images/bg.jpg");
 		background-position: top left, bottom center;
 		background-repeat: repeat, no-repeat;

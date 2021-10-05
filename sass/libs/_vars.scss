@@ -19,13 +19,13 @@ $size: (
 // Font.
 $font: (
   family: (
-    "Rubik",
+    "Karla",
     Helvetica,
-    sans-serif,
+    monospace,
   ),
   family-fixed: (
-    "Courier New",
-    monospace,
+    "Rubik",
+    sans-serif,
   ),
   weight: 400,
   weight-bold: 400,
@@ -33,28 +33,28 @@ $font: (
 
 // Palette.
 $palette: (
-  bg: #fff,
-  fg: #a2a2a2,
-  fg-bold: #787878,
-  fg-light: #b2b2b2,
-  border: #efefef,
-  border-bg: #f7f7f7,
-  border2: #dfdfdf,
-  border2-bg: #e7e7e7,
+  bg: #0A0A0A, //section bg
+  fg: #F4F4F9, //  text, meta, excerpt 
+  fg-bold: #F4F4F9, /// titles
+  fg-light: #04724D, // unk
+  border: #CC2936, //quotes
+  border-bg: cyan, // unk
+  border2: purple, //unk
+  border2-bg: teal, //unk
   accent1: (
-    bg: #49bf9d,
-    fg: mix(#49bf9d, #ffffff, 25%),
-    fg-bold: #ffffff,
-    fg-light: mix(#49bf9d, #ffffff, 40%),
+    bg: #04724D,
+    fg: mix(#04724D, #F4F4F9, 25%),
+    fg-bold: #F4F4F9,
+    fg-light: mix(#04724D, #F4F4F9, 40%),
     border: rgba(255, 255, 255, 0.25),
     border-bg: rgba(255, 255, 255, 0.075),
     border2: rgba(255, 255, 255, 0.5),
     border2-bg: rgba(255, 255, 255, 0.2),
   ),
   accent2: (
-    bg: #1f1815,
+    bg: #222,
     fg: rgba(255, 255, 255, 0.5),
-    fg-bold: #ffffff,
+    fg-bold: #F4F4F9,
     fg-light: rgba(255, 255, 255, 0.4),
     border: rgba(255, 255, 255, 0.25),
     border-bg: rgba(255, 255, 255, 0.075),
