@@ -1,3 +1,10 @@
+// Based on Strata by Pixelarity
+@import "fontawesome-all.min.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,300&display=swap');
+
+// Base.
+@import "base/base";
 @import "libs/vars";
 @import "libs/functions";
 @import "libs/mixins";
@@ -5,16 +12,15 @@
 @import "libs/breakpoints";
 @import "libs/html-grid";
 
-@import "fontawesome-all.min.css";
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Raleway:400,800,900");
+$size-header-width: 35%;
+$size-header-pad: 4em;
 
 // Breakpoints.
-
 @include breakpoints(
   (
     xlarge: (
       1281px,
-      1680px,
+      1800px,
     ),
     large: (
       981px,
@@ -35,37 +41,20 @@
   )
 );
 
-// Base.
-@import "base/base";
 @import "base/reset";
-@import "base/page";
-@import "base/typography";
-
-// Component.
-
-@import "components/row";
-@import "components/author";
-@import "components/blurb";
-@import "components/box";
-@import "components/button";
-@import "components/form";
-@import "components/icon";
-@import "components/image";
-@import "components/list";
-@import "components/actions";
-@import "components/icons";
-@import "components/posts";
-@import "components/mini-post";
-@import "components/post";
-@import "components/section";
-@import "components/table";
-
-// Layout.
-
-@import "layout/header";
-@import "layout/wrapper";
-@import "layout/main";
-@import "layout/sidebar";
-@import "layout/intro";
-@import "layout/footer";
-@import "layout/menu";
+@import "base/basic";
+@import "layout/box";
+@import "layout/box";
+@import "layout/icon";
+@import "layout/image";
+@import "layout/list";
+@import "layout/actions";
+@import "layout/table";
+@import "layout/buttons";
+@import "components/header";
+@import "components/footer";
+@import "components/main";
+@import "components/main";
+@import "components/poptrox";
+@import "layout/touch";
+@import "layout/breakpoints";

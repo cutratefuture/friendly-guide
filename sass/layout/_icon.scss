@@ -1,5 +1,3 @@
-
-
 /* Icon */
 
 .icon {
@@ -24,15 +22,6 @@
   &.brands {
     &:before {
       font-family: "Font Awesome 5 Brands";
-    }
-  }
-
-  &.prefix {
-  }
-
-  &.suffix {
-    &:before {
-      float: right;
     }
   }
 }

@@ -16,7 +16,7 @@ get_header();
 ?>
 
 
-	<main class="post">
+	<main id="main" class="post">
 
 		<?php
 		while ( have_posts() ) :

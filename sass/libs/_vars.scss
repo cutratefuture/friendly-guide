@@ -5,23 +5,21 @@ $misc: (
 
 // Duration.
 $duration: (
-  menu: 0.5s,
   transition: 0.2s,
 );
 
 // Size.
 $size: (
+  border-radius: 0.35em,
   element-height: 2.75em,
   element-margin: 2em,
-  section-spacing: 2em,
-  section-spacing-small: 1.5em,
-  menu: 25em,
+  container-width: 100%,
 );
 
 // Font.
 $font: (
   family: (
-    "Source Sans Pro",
+    "Rubik",
     Helvetica,
     sans-serif,
   ),
@@ -29,28 +27,38 @@ $font: (
     "Courier New",
     monospace,
   ),
-  family-heading: (
-    "Raleway",
-    Helvetica,
-    sans-serif,
-  ),
   weight: 400,
-  weight-bold: 700,
-  weight-heading: 400,
-  weight-heading-bold: 800,
-  weight-heading-extrabold: 900,
-  kerning-heading: 0.25em,
+  weight-bold: 400,
 );
 
 // Palette.
 $palette: (
-  bg: #FAFAFA, //posts, header
-  bg-alt: #EEF4ED, //background 
-  fg: #0B2545, //posts, archives, categories 
-  fg-bold: #134074, //titles, date 
-  fg-light: #13315C, //icons, footer text
-  accent: #8DA9C4, //hover 
-  border: rgba(160, 160, 160, 0.3),
-  border-bg: rgba(160, 160, 160, 0.075),
-  border-alt: rgba(160, 160, 160, 0.65)
+  bg: #fff,
+  fg: #a2a2a2,
+  fg-bold: #787878,
+  fg-light: #b2b2b2,
+  border: #efefef,
+  border-bg: #f7f7f7,
+  border2: #dfdfdf,
+  border2-bg: #e7e7e7,
+  accent1: (
+    bg: #49bf9d,
+    fg: mix(#49bf9d, #ffffff, 25%),
+    fg-bold: #ffffff,
+    fg-light: mix(#49bf9d, #ffffff, 40%),
+    border: rgba(255, 255, 255, 0.25),
+    border-bg: rgba(255, 255, 255, 0.075),
+    border2: rgba(255, 255, 255, 0.5),
+    border2-bg: rgba(255, 255, 255, 0.2),
+  ),
+  accent2: (
+    bg: #1f1815,
+    fg: rgba(255, 255, 255, 0.5),
+    fg-bold: #ffffff,
+    fg-light: rgba(255, 255, 255, 0.4),
+    border: rgba(255, 255, 255, 0.25),
+    border-bg: rgba(255, 255, 255, 0.075),
+    border2: rgba(255, 255, 255, 0.5),
+    border2-bg: rgba(255, 255, 255, 0.2),
+  ),
 );
