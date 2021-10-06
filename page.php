@@ -15,7 +15,6 @@
 get_header();
 ?>
 
-
 	<main id="main" class="post">
 
 		<?php

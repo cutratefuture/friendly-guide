@@ -10,6 +10,7 @@
 
 ?>
 
+
 <article id="post-<?php the_ID(); ?>" <?php post_class('post'); ?>>
 
 	<header class="entry-header">
@@ -22,13 +23,16 @@
 
 		if ('post' === get_post_type()) :
 		?>
+
 			<div class="meta">
 				<?php
 				friendly_guide_posted_on();
 				friendly_guide_posted_by();
+
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
+
 	</header><!-- .entry-header -->
 
 	<?php friendly_guide_post_thumbnail(); ?>
@@ -36,13 +40,13 @@
 	<div class="post">
 		<?php
 		the_excerpt();
-
 		wp_link_pages(
 			array(
 				'before' => '<div class="page-links">' . esc_html__('Pages:', 'friendly-guide'),
 				'after'  => '</div>',
 			)
 		);
+
 		?>
 	</div><!-- .entry-content -->
 

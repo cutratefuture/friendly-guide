@@ -177,32 +177,66 @@ function friendly_guide_scripts()
 add_action('wp_enqueue_scripts', 'friendly_guide_scripts');
 
 
-function wpb_load_fa() {
+function wpb_load_fa()
+{
 	wp_enqueue_style('wpb-fa', FRIENDLY_DIR_URI  . '/fontawesome-all.min.css');
 }
 add_action('wp_enqueue_scripts', 'wpb_load_fa');
 
 
-function wpse15850_body_class( $wp_classes, $extra_classes )
+function wpse15850_body_class($wp_classes, $extra_classes)
 {
-    // List of the only WP generated classes allowed
-    $whitelist = array( 'home', 'blog', 'archive', 'single', 'category', 'tag', 'error404', 'logged-in', 'admin-bar' );
+	// List of the only WP generated classes allowed
+	$whitelist = array('home', 'blog', 'archive', 'single', 'category', 'tag', 'error404', 'logged-in', 'admin-bar');
 
-    // List of the only WP generated classes that are not allowed
-    $blacklist = array( 'home', 'blog', 'archive', 'single', 'category', 'tag', 'error404', 'logged-in', 'admin-bar' );
+	// List of the only WP generated classes that are not allowed
+	$blacklist = array('home', 'blog', 'archive', 'single', 'category', 'tag', 'error404', 'logged-in', 'admin-bar');
 
-    // Filter the body classes
-    // Whitelist result: (comment if you want to blacklist classes)
-    #$wp_classes = array_intersect( $wp_classes, $whitelist );
-	
-    // Blacklist result: (uncomment if you want to blacklist classes)
-    $wp_classes = array_diff( $wp_classes, $blacklist );
+	// Filter the body classes
+	// Whitelist result: (comment if you want to blacklist classes)
+	#$wp_classes = array_intersect( $wp_classes, $whitelist );
 
-    // Add the extra classes back untouched
-    return array_merge( $wp_classes, (array) $extra_classes );
+	// Blacklist result: (uncomment if you want to blacklist classes)
+	$wp_classes = array_diff($wp_classes, $blacklist);
+
+	// Add the extra classes back untouched
+	return array_merge($wp_classes, (array) $extra_classes);
 }
-add_filter( 'body_class', 'wpse15850_body_class', 10, 2 );
+add_filter('body_class', 'wpse15850_body_class', 10, 2);
 
+// Numbered Pagination
+if (!function_exists('wpex_pagination')) {
+
+	function wpex_pagination()
+	{
+
+		$prev_arrow = is_rtl() ? '→' : '←';
+		$next_arrow = is_rtl() ? '←' : '→';
+
+		global $wp_query;
+		$total = $wp_query->max_num_pages;
+		$big = 999999999; // need an unlikely integer
+		if ($total > 1) {
+			if (!$current_page = get_query_var('paged'))
+				$current_page = 1;
+			if (get_option('permalink_structure')) {
+				$format = 'page/%#%/';
+			} else {
+				$format = '&paged=%#%';
+			}
+			echo paginate_links(array(
+				'base'			=> str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
+				'format'		=> $format,
+				'current'		=> max(1, get_query_var('paged')),
+				'total' 		=> $total,
+				'mid_size'		=> 3,
+				'type' 			=> 'list',
+				'prev_text'		=> $prev_arrow,
+				'next_text'		=> $next_arrow,
+			));
+		}
+	}
+}
 
 /**
  * Implement the Custom Header feature.
